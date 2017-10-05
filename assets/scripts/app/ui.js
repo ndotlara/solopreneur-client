@@ -18,6 +18,14 @@ const onSignupSuccess = function () {
   $('#signUpSuccess').prepend('<div class="row" style="text-align: center; color: black"> <p>Welcome! You can now log in. </p></div>')
 }
 
+const onSignupFailure = () => {
+  $('#errorMessageModalSignUp').empty()
+  $('#errorMessage').empty()
+  $('#registration').find('input:text').val('')
+  $('#registration').find('input:password').val('')
+  $('#errorMessageModalSignUp').prepend('<div class="row" style="text-align: center; color: red"> <p> ' + 'Passwords do not match or username is already taken. Try again!' + ' </p></div>')
+}
+
 const onSigninSuccess = function(data) {
   // console.log(data.user)
   app.user = data.user
@@ -41,5 +49,23 @@ const onSigninSuccess = function(data) {
 
 module.exports = {
   onSignupSuccess,
+  onSignupFailure,
   onSigninSuccess
+  // onSignInFailure,
+  // onLogoutSuccess,
+  // onLogoutFailure,
+  // onResetSuccess,
+  // onResetFailure
+  // onCreateEventSuccess,
+  // onCreateEventFailure,
+  // onDeleteEventSuccess,
+  // onDeleteEventFailure,
+  // onUpdateEventSuccess,
+  // onUpdateEventFailure,
+  // onCreateCommentSuccess,
+  // onCreateCommentFailure,
+  // onDeleteCommentSuccess,
+  // onDeleteCommentFailure,
+  // onUpdateCommentSuccess,
+  // onUpdateCommentFailure
 }
