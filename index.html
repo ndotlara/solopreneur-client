@@ -34,7 +34,7 @@
               <a class="nav-link active" href="#">Home</a>
               <a class="nav-link" href="#">Membership</a>
               <a class="nav-link" href="#">Contact</a>
-              <a class="nav-link" href="#">Register</a>
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#registerModal">Register</a>
             </nav>
           </div>
         </div>
@@ -60,6 +60,58 @@
 
   </div>
   <!-- cover end -->
+
+  <!-- register modal -->
+  <div class="container">
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="registerModalLabel">Register</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-9 push-md-3 offset-md-3">
+        <form id="registration" class="form-register">
+          <p>Sign up for your Solopreneur account</p>
+            <div class="input-group">
+              <label for="password"> Email </label>
+              <input type="text" class="form-control" name="credentials[email]" placeholder="email" aria-label="email" aria-describedby="sizing-addon2">
+            </div>
+          <br>
+            <div class="input-group">
+              <label for="password"> Password </label>
+              <input type="password" class="form-control" name="credentials[password]" placeholder="password">
+            </div>
+          <br>
+            <div class="input-group">
+              <label for="password-confirm"> Confirm Password </label>
+              <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="confirm password">
+            </div>
+          </form>
+      </div>
+    </div>
+  <br>
+  <div class="modal-footer-reg">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+    <input type="submit" class="btn btn-info submit" name="submit" value="register">
+  </div>
+  <div id="signUpSuccess"></div>
+  <div id="errorMessageModalSignUp"></div>
+<br>
+  <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">close</button>
+  <!-- <button type="button" id="loginButton2" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">login</button>
+  <button type="button"  class="btn btn-secondary" style="background-color: #000" data-target="#loginModal">login</button> -->
+<br>
+  </div><!-- model for registration end_________________________________________ -->
+
 
       <!-- bootstrap js -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
