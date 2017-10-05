@@ -8,8 +8,9 @@
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
       <!-- boostrap css -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-      <link href="assets/styles/custom.css" rel="stylesheet">
       <link href="assets/styles/cover.css" rel="stylesheet">
+      <link href="assets/styles/custom.scss" rel="stylesheet">
+
       <!-- font styles -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Antic|Arimo:400i|Oswald:700" rel="stylesheet">
@@ -61,56 +62,100 @@
   </div>
   <!-- cover end -->
 
-  <!-- register modal -->
+<!-- register modal -->
   <div class="container">
-    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="registerModalLabel">Register</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
+      <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                  <div class="row">
+                      <div class="col-md-9 push-md-3 offset-md-3">
+                        <form id="registration" class="form-register"><p>Sign up for your Solopreneur account</p>
+                          <div class="input-group">
+                              <label for="password"> Email </label>
+                            <input type="text" class="form-control" name="credentials[email]" placeholder="email" aria-label="Username" aria-describedby="sizing-addon2">
+                          </div>
+                        <br>
+                          <div class="input-group">
+                          <label for="password"> Password </label>
+                          <input type="password" class="form-control" name="credentials[password]" placeholder="password">
+                          </div>
+                        <br>
+                          <div class="input-group">
+                          <label for="password-confirm"> Confirm Password </label>
+                          <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="confirm password">
+                          </div>
+
+                    </div>
+                  </div>
+                  <br>
+                  <div class="modal-footer-reg">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+                    <input type="submit" class="btn btn-info submit" name="submit" value="register">
+                  </div>
+                  <div id="signUpSuccess">
+                    <!-- Button trigger for login -->
+                    <button type="button" class="btn btn-primary login-button" data-toggle="modal" data-target="#loginModal">log in</button>
+                  </div>
+                  <div id="errorMessageModalSignUp"></div>
+                  </form>
+              <br>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
   </div>
-  <div class="modal-body">
-    <div class="row">
-      <div class="col-md-9 push-md-3 offset-md-3">
-        <form id="registration" class="form-register">
-          <p>Sign up for your Solopreneur account</p>
-            <div class="input-group">
-              <label for="password"> Email </label>
-              <input type="text" class="form-control" name="credentials[email]" placeholder="email" aria-label="email" aria-describedby="sizing-addon2">
+<!-- register modal end -->
+
+<!-- login modal -->
+<div class="container">
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Sign In</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-9 push-md-3 offset-md-3">
+                      <form id="login" class="form-login"><p>Log in to your Solopreneur account </p>
+                        <div class="input-group">
+                            <label for="password"> Email </label>
+                          <input type="text" class="form-control" name="credentials[email]" placeholder="email" aria-label="Username" aria-describedby="sizing-addon2">
+                        </div>
+                      <br>
+                        <div class="input-group">
+                        <label for="password"> Password </label>
+                        <input type="password" class="form-control" name="credentials[password]" placeholder="password">
+                      </div>
+                      <div class="errorMessageModalLogin"></div>
+                  </div>
+                </div>
+                <br>
+                <div class="modal-footer-login">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+                  <button type="submit" class="btn btn-info loginButton" name="submit" value="login">log in</button>
+                </div>
+                </form>
+                <br>
+                <button type="button" id="myAccountButton" class="btn btn-secondary" style="background-color: #000" data-toggle="" data-target="" data-dismiss="modal">go to my account</button>   <button class="btn btn-info" id="log-out-btn2" data-dismiss="modal"> log out </button>
+                <br>
             </div>
-          <br>
-            <div class="input-group">
-              <label for="password"> Password </label>
-              <input type="password" class="form-control" name="credentials[password]" placeholder="password">
-            </div>
-          <br>
-            <div class="input-group">
-              <label for="password-confirm"> Confirm Password </label>
-              <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="confirm password">
-            </div>
-          </form>
+          </div>
       </div>
-    </div>
-  <br>
-  <div class="modal-footer-reg">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
-    <input type="submit" class="btn btn-info submit" name="submit" value="register">
   </div>
-  <div id="signUpSuccess"></div>
-  <div id="errorMessageModalSignUp"></div>
-<br>
-  <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">close</button>
-  <!-- <button type="button" id="loginButton2" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">login</button>
-  <button type="button"  class="btn btn-secondary" style="background-color: #000" data-target="#loginModal">login</button> -->
-<br>
-  </div><!-- model for registration end_________________________________________ -->
+</div><!-- modal for login end_________________________________________ -->
 
 
       <!-- bootstrap js -->

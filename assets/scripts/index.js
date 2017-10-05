@@ -22,4 +22,4 @@ $(() => {
   $('#log-out-btn').on('click', appEvents.logoutUser)
   $('#log-out-btn2').on('click', appEvents.logoutUser)
   $('#passChange').on('submit', appEvents.resetPassword)
-}
+})
