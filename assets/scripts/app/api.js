@@ -3,7 +3,6 @@ const app = require('./../app.js')
 const addUser = function (data) {
   return $.ajax({
     url: app.host + '/sign-up/',
-    // headers: { 'header': 'Content-Type: application/json' },
     method: 'POST',
     data
   })
@@ -30,6 +29,7 @@ const userLogout = function (id) {
       Authorization: 'Token token=' + app.user.token
     }
   })
+}
 
 const passwordReset = function (data) {
   // console.log(data)
@@ -44,50 +44,53 @@ const passwordReset = function (data) {
 }
 
 const newEvent = function (data) {
-  console.log('event created')
   return $.ajax({
-  url: app.host + '/events/',
-  headers: {
-    Authorization: 'Token token=' + app.user.token
-  },
-  method: 'POST',
-  data: {
-    'event': {
-      'event_name': data.name,
-      'date': data.date,
-      'time': data.time,
-      'street_address': data.street_address,
-      'city': data.city,
-      'state': data.state,
-      'zip_code': data.zip_code,
-      'description': data.description,
-      'user_id': data.user_id
+    url: app.host + '/events/',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    method: 'POST',
+    data: {
+      'event': {
+        'event_name': data.name,
+        'date': data.date,
+        'time': data.time,
+        'street_address': data.street_address,
+        'city': data.city,
+        'state': data.state,
+        'zip_code': data.zip_code,
+        'description': data.description,
+        'user_id': data.user_id
+      }
     }
+  })
 }
 
-const updateAnEvent = function (data) {
-  console.log('event updated')
+const updateAnEvent = function (eventId, data) {
+  // console.log('event updated')
   return $.ajax({
-  url: app.host + '/events/' + eventID,
-  headers: {
-    Authorization: 'Token token=' + app.user.token
-  },
-  method: 'PATCH',
-  data: {
-    'event': {
-      'event_name': data.name,
-      'date': data.date,
-      'time': data.time,
-      'street_address': data.street_address,
-      'city': data.city,
-      'state': data.state,
-      'zip_code': data.zip_code,
-      'description': data.description,
-      'user_id': data.user_id
+    url: app.host + '/events/' + eventId,
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    method: 'PATCH',
+    data: {
+      'event': {
+        'event_name': data.name,
+        'date': data.date,
+        'time': data.time,
+        'street_address': data.street_address,
+        'city': data.city,
+        'state': data.state,
+        'zip_code': data.zip_code,
+        'description': data.description,
+        'user_id': data.user_id
+      }
     }
+  })
 }
 
-const deleteEvent = function(deleteId) {
+const deleteEvent = function (deleteId) {
   return $.ajax({
     url: app.host + '/surveys/' + deleteId,
     headers: {
@@ -111,25 +114,27 @@ const viewOneEvent = function (eventID) {
   })
 }
 
-const editProfile = function (data) {
-  console.log('profile updated')
+const editProfile = function (id, data) {
+  // console.log('profile updated')
   return $.ajax({
-  url: app.host + '/users/' + userId,
-  headers: {
-    Authorization: 'Token token=' + app.user.token
-  },
-  method: 'PATCH',
-  data: {
-    'user': {
-      'first_name': user.first_name,
-      'last_name': user.last_name,
-      'company': user.company,
-      'title': user.title,
-      'city': user.city,
-      'state': user.state,
-      'bio': user.bio,
-      'interests': user.interests
+    url: app.host + '/users/' + app.user.id,
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    method: 'PATCH',
+    data: {
+      'user': {
+        'first_name': app.user.first_name,
+        'last_name': app.user.last_name,
+        'company': app.user.company,
+        'title': app.user.title,
+        'city': app.user.city,
+        'state': app.user.state,
+        'bio': app.user.bio,
+        'interests': app.user.interests
+      }
     }
+  })
 }
 
 const newComment = function (data) {
@@ -145,6 +150,7 @@ const newComment = function (data) {
         'event_id': comment.event_id,
         'comment_body': comment.comment_body
       }
+    }
   })
 }
 
@@ -161,10 +167,11 @@ const editComment = function (data) {
         'event_id': comment.event_id,
         'comment_body': comment.comment_body
       }
+    }
   })
 }
 
-const deleteComment = function(deleteId) {
+const deleteComment = function (deleteId) {
   return $.ajax({
     url: app.host + '/comments/' + deleteID,
     headers: {

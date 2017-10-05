@@ -26,7 +26,7 @@ const onSignupFailure = () => {
   $('#errorMessageModalSignUp').prepend('<div class="row" style="text-align: center; color: red"> <p> ' + 'Passwords do not match or username is already taken. Try again!' + ' </p></div>')
 }
 
-const onSigninSuccess = function(data) {
+const onSigninSuccess = function (data) {
   // console.log(data.user)
   app.user = data.user
   $('#login input').not('.submit').val('')
