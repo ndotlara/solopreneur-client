@@ -1,0 +1,24 @@
+/*
+ * Globals
+ */
+
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Antic', sans-serif;
+font-family: 'Arimo', sans-serif;
+*/
+
+html *
+{
+   font-family: 'Antic', sans-serif !important;
+}
+
+h1, h3 {
+  font-family: 'Oswald', sans-serif !important;
+  margin-bottom: 30px !important;
+}
+
+p {
+  font-size: 16px !important;
+  margin: 0 140px 10px !important;
+}
