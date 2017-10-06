@@ -27,8 +27,8 @@ const loginUser = function (e) {
 }
 
 // logout event
-const logoutUser = function () {
-  event.preventDefault(event)
+const logoutUser = function (e) {
+  event.preventDefault(e)
   appApi.userLogout()
     .then(appUi.onLogoutSuccess)
     .catch(appUi.onLogoutFailure)

@@ -20,7 +20,7 @@ $(() => {
   $('#registration').on('submit', appEvents.registerUser)
   $('#login').on('submit', appEvents.loginUser)
   $('#log-out-btn').on('click', appEvents.logoutUser)
-  $('#log-out-btn2').on('click', appEvents.logoutUser)
+  // $('#log-out-btn2').on('click', appEvents.logoutUser)
   $('#passChange').on('submit', appEvents.resetPassword)
 })
 
@@ -34,4 +34,20 @@ $(document).on('click', '.delete-event', function (e) {
   event.preventDefault()
   let deleteEventId = $(this).attr('id')
   appEvents.deleteEvent(deleteEventId)
+})
+
+$(document).on('click', '#loginButton', function (e) {
+  e.preventDefault()
+  $('.myAccountSection').show()
+// $('#passChange').show()
+  $('#errorMessageModalLogin').show()
+  $('#myAccountButton').hide()
+})
+
+$(document).on('click', '#changePwButton', function (e) {
+  e.preventDefault()
+  $('.myAccountSection').show()
+// $('#passChange').show()
+  $('#errorMessageModalLogin').show()
+  $('#myAccountButton').hide()
 })

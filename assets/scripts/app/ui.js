@@ -10,7 +10,7 @@ const onSignupSuccess = function () {
   $('#errorMessageModalSignUp').empty()
   $('#registration').hide()
   $('.modal-footer-reg').hide()
-  $('#loginButton2').show()
+  $('#loginButton').show()
   $('.cancel').show()
   $('#loginButton2').show()
   $('#registration').find('input:text').val('')
@@ -27,7 +27,7 @@ const onSignupFailure = () => {
 }
 
 const onSigninSuccess = function (data) {
-  // console.log(data.user)
+  console.log('sign-in success')
   app.user = data.user
   $('#login input').not('.submit').val('')
   $('#passChange').show()
@@ -38,23 +38,57 @@ const onSigninSuccess = function (data) {
   $('#login').hide()
   $('.modal-footer-login').hide()
   $('#myAccountButton').show()
-  $('#myAccountButton2').hide()
+  // $('#myAccountButton2').hide()
   $('#log-out-btn').show()
   $('#showChangePassButton').show()
   $('#passChange').show()
   $('.modal-footer-changepwd').show()
   $('.yay-message').empty()
-  // console.log('sign in successful')
+  $('.register-button').hide()
+  $('#cover').hide()
+}
+
+const onResetSuccess = function () {
+  $('#reset-success').empty()
+  console.log('password has been reset')
+  $('#passChange input').not('.submit').val('')
+  $('#passChange').hide()
+  $('.modal-footer-changepwd').hide()
+  $('#myAccountButton2').show()
+  $('#reset-success').prepend('<div class="row" style="text-align: center; color: black"> <p><br>Your password has been reset.</p></div>')
+}
+
+const onLogoutSuccess = function (app) {
+  console.log('logged out')
+  $('.errorMessageModalLogin').empty()
+  $('#myAccountButton').hide()
+  $('.myAccountSection').hide()
+  $('#myAccountButton2').hide()
+  $('#login').show()
+  $('.register-button').show()
+  $('.login-button').show()
+  $('.modal-footer-login').show()
+  $('#registration').show()
+  $('.modal-footer-reg').show()
+  $('#log-out-btn').hide()
+  $('#passChange').hide()
+  $('#errorMessage').empty()
+  $('#errorMessageModalSignUp').empty()
+  $('#signUpSuccess').empty()
+  $('#survey').hide()
+  $('#showChangePassButton').hide()
+  $('.yay-message').empty()
+  $('#cover').show()
 }
 
 module.exports = {
   onSignupSuccess,
   onSignupFailure,
-  onSigninSuccess
+  onSigninSuccess,
   // onSignInFailure,
-  // onLogoutSuccess,
+  onLogoutSuccess,
   // onLogoutFailure,
-  // onResetSuccess,
+  onResetSuccess
   // onResetFailure
   // onCreateEventSuccess,
   // onCreateEventFailure,

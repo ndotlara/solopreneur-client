@@ -1,3 +1,8 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 // @import './assets/styles/custom.scss'
+
+#dashboard-view {
+  background-color: #19336e;
+  opacity: 0.5;
+}

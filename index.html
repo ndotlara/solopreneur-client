@@ -12,7 +12,6 @@
       <link href="assets/styles/custom.scss" rel="stylesheet">
 
       <!-- font styles -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Antic|Arimo:400i|Oswald:700" rel="stylesheet">
 
 
@@ -22,7 +21,7 @@
     </head>
     <body>
       <!-- cover -->
-      <div class="site-wrapper">
+    <div class="site-wrapper" id="cover">
 
     <div class="site-wrapper-inner">
 
@@ -49,11 +48,11 @@
           </p>
         </div>
 
-        <!-- <div class="mastfoot">
+        <div class="mastfoot">
           <div class="inner">
-            <p>Cover template for <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            <p>Made with love</a> by <a href="#">Natalia</a>.</p>
           </div>
-        </div> -->
+        </div>
 
       </div>
 
@@ -102,7 +101,7 @@
                   </div>
                   <div id="signUpSuccess">
                     <!-- Button trigger for login -->
-                    <button type="button" class="btn btn-primary login-button" data-toggle="modal" data-target="#loginModal">log in</button>
+                    <button type="button" class="btn btn-primary login-button" id="loginButton" data-toggle="modal" data-target="#loginModal">log in</button>
                   </div>
                   <div id="errorMessageModalSignUp"></div>
                   </form>
@@ -149,7 +148,7 @@
                 </div>
                 </form>
                 <br>
-                <button type="button" id="myAccountButton" class="btn btn-secondary" style="background-color: #000" data-toggle="" data-target="" data-dismiss="modal">go to my account</button>   <button class="btn btn-info" id="log-out-btn2" data-dismiss="modal"> log out </button>
+                <button type="button" id="myAccountButton" class="btn btn-secondary" style="background-color: #000" data-toggle="" data-target="" data-dismiss="modal">go to my dashboard</button>
                 <br>
             </div>
           </div>
@@ -157,6 +156,75 @@
   </div>
 </div><!-- modal for login end_________________________________________ -->
 
+ <!-- section dashboard -->
+ <section id="dashboard">
+   <div class="container-fluid">
+     <nav class="nav justify-content-end">
+        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link" data-toggle="modal" data-target="#resetModal">Reset Password</a>
+        <button type="button" class="btn btn-primary" id="log-out-btn">log out</button>
+      </nav>
+
+      <div class="container-fluid" id="dashboard-view">
+        <div class="row">
+          <div class="col">
+
+          </div>
+          <div class="col">
+            2 of 3
+          </div>
+          <div class="col">
+            3 of 3
+          </div>
+        </div>
+    </div>
+
+   </div>
+ </section>
+
+ <!-- reset password modal -->
+<div class="container">
+  <div class="modal fade" id="resetModal" tabindex="-1" role="dialog" aria-labelledby="resetPasswordModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="resetPwModalLabel">Change Password</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-9 push-md-3 offset-md-3">
+            <form id="passChange">
+              <p> Change Password </p>
+              <div class="input-group">
+                <label for="oldPassword"> Old Password </label>
+                <input type="password" class="form-control" name="passwords[old]" placeholder="old password">
+              </div>
+              <div class="input-group">
+                <label for="newPassword"> New Password </label>
+                <input type="password" class="form-control" name="passwords[new]" placeholder="new password">
+              </div>
+          </div>
+          </div>
+      </div>
+                <br>
+      <div class="modal-footer-changepwd">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+        <input type="submit" class="btn btn-info submit" id="" name="submit" value="change password">
+      </div>
+          <div id="reset-success"></div>
+          <div id="reset-fail"></div>
+          </form>
+                <br>
+        <button type="button" id="myAccountButton2" class="btn btn-secondary" style="background-color: #000" data-toggle="" data-target="" data-dismiss="modal">go to my account</button>
+                <br>
+          </div>
+        </div>
+      </div>
+    </div><!-- reset password modal end -->
 
       <!-- bootstrap js -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
