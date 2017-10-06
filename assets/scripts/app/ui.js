@@ -45,7 +45,8 @@ const onSigninSuccess = function (data) {
   $('.modal-footer-changepwd').show()
   $('.yay-message').empty()
   $('.register-button').hide()
-  $('#cover').hide()
+  $('#welcome-cover').hide()
+  $('#on-login-cover').show()
 }
 
 const onResetSuccess = function () {
@@ -67,6 +68,7 @@ const onLogoutSuccess = function (app) {
   $('#login').show()
   $('.register-button').show()
   $('.login-button').show()
+  $('#loginButton').show()
   $('.modal-footer-login').show()
   $('#registration').show()
   $('.modal-footer-reg').show()
@@ -79,6 +81,7 @@ const onLogoutSuccess = function (app) {
   $('#showChangePassButton').hide()
   $('.yay-message').empty()
   $('#cover').show()
+  $('#dashboard-view').hide()
 }
 
 module.exports = {

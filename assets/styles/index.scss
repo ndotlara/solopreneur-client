@@ -1,9 +1,42 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-@import './assets/styles/custom';
 @import './assets/styles/cover';
 
-#dashboard-view {
-  background-color: #19336e;
-  opacity: 0.5;
+// font-family: 'Oswald', sans-serif;
+// font-family: 'Antic', sans-serif;
+// font-family: 'Arimo', sans-serif;
+
+
+html *
+{
+   font-family: 'Antic', sans-serif !important;
+}
+
+h1, h3 {
+  font-family: 'Oswald', sans-serif !important;
+  margin-bottom: 30px !important;
+}
+
+.inner-cover p {
+  font-size: 16px !important;
+}
+
+.col {
+  background-color: #dbe2f5;
+  border-radius: 20px;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+#profile-pic {
+  max-width: 25% !important;
+}
+
+.nav {
+  padding-bottom: 45px;
+}
+
+
+#columns {
+  height: 530px;
+  justify-content: space-evenly;
 }
