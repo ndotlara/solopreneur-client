@@ -1,8 +1,9 @@
 const app = require('./../app.js')
+const config = require('./../config.js')
 
 const addUser = function (data) {
   return $.ajax({
-    url: app.host + '/sign-up/',
+    url: config.apiOrigin + '/sign-up/',
     method: 'POST',
     data
   })
@@ -10,7 +11,7 @@ const addUser = function (data) {
 
 const userLogin = function (data) {
   return $.ajax({
-    url: app.host + '/sign-in/',
+    url: config.apiOrigin + '/sign-in/',
     method: 'POST',
     data: {
       'credentials': {
@@ -23,7 +24,7 @@ const userLogin = function (data) {
 
 const userLogout = function (id) {
   return $.ajax({
-    url: app.host + '/sign-out/' + app.user.id,
+    url: config.apiOrigin + '/sign-out/' + app.user.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -34,7 +35,7 @@ const userLogout = function (id) {
 const passwordReset = function (data) {
   // console.log(data)
   return $.ajax({
-    url: app.host + '/change-password/' + app.user.id,
+    url: config.apiOrigin + '/change-password/' + app.user.id,
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
@@ -45,7 +46,7 @@ const passwordReset = function (data) {
 
 const newEvent = function (data) {
   return $.ajax({
-    url: app.host + '/events/',
+    url: config.apiOrigin + '/events/',
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
@@ -69,7 +70,7 @@ const newEvent = function (data) {
 const updateAnEvent = function (eventId, data) {
   // console.log('event updated')
   return $.ajax({
-    url: app.host + '/events/' + eventId,
+    url: config.apiOrigin + '/events/' + eventId,
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
@@ -92,7 +93,7 @@ const updateAnEvent = function (eventId, data) {
 
 const deleteEvent = function (deleteId) {
   return $.ajax({
-    url: app.host + '/surveys/' + deleteId,
+    url: config.apiOrigin + '/surveys/' + deleteId,
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
@@ -102,14 +103,14 @@ const deleteEvent = function (deleteId) {
 
 const viewAllEvents = function () {
   return $.ajax({
-    url: app.host + '/events',
+    url: config.apiOrigin + '/events',
     method: 'GET'
   })
 }
 
 const viewOneEvent = function (eventID) {
   return $.ajax({
-    url: app.host + '/events/' + eventID,
+    url: config.apiOrigin + '/events/' + eventID,
     method: 'GET'
   })
 }
@@ -117,7 +118,7 @@ const viewOneEvent = function (eventID) {
 const editProfile = function (id, data) {
   // console.log('profile updated')
   return $.ajax({
-    url: app.host + '/users/' + app.user.id,
+    url: config.apiOrigin + '/users/' + app.user.id,
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
@@ -139,7 +140,7 @@ const editProfile = function (id, data) {
 
 const newComment = function (data) {
   return $.ajax({
-    url: app.host + '/comments',
+    url: config.apiOrigin + '/comments',
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
@@ -156,7 +157,7 @@ const newComment = function (data) {
 
 const editComment = function (data) {
   return $.ajax({
-    url: app.host + '/comments/' + commentID,
+    url: config.apiOrigin + '/comments/' + commentID,
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
@@ -173,7 +174,7 @@ const editComment = function (data) {
 
 const deleteComment = function (deleteId) {
   return $.ajax({
-    url: app.host + '/comments/' + deleteID,
+    url: config.apiOrigin + '/comments/' + deleteID,
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
