@@ -20,46 +20,37 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <!-- cover -->
-    <div class="site-wrapper" id="cover">
-
-    <div class="site-wrapper-inner">
-
-      <div class="cover-container">
-
-        <div class="masthead clearfix">
-          <div class="inner">
-            <h3 class="masthead-brand">Solopreneur</h3>
-            <nav class="nav nav-masthead">
-              <a class="nav-link active" href="#">Home</a>
-              <a class="nav-link" href="#">Membership</a>
-              <a class="nav-link" href="#">Contact</a>
-              <a class="nav-link" href="#" data-toggle="modal" data-target="#registerModal">Register</a>
-            </nav>
+      <!-- landing cover start -->
+        <div class="site-wrapper" id="welcome-cover">
+          <div class="site-wrapper-inner">
+            <div class="cover-container">
+              <div class="masthead clearfix">
+                <div class="inner">
+                  <h3 class="masthead-brand">Solopreneur</h3>
+                    <nav class="nav nav-masthead">
+                      <a class="nav-link active" href="#">Home</a>
+                      <!-- <a class="nav-link" href="#">Membership</a>
+                      <a class="nav-link" href="#">Contact</a> -->
+                      <a class="nav-link" href="#" data-toggle="modal" data-target="#registerModal">Register</a>
+                    </nav>
+                </div>
+              </div>
+              <div class="inner cover">
+                <h1 class="cover-heading">Welcome Solopreneurs.</h1>
+                <p class="lead">We know your hustle is strong but you don't have to go at it alone.  Join the Solopreneur network to meet other like-minded individuals and start building your network today. </p>
+                <p> Be inspired. Collaborate. Get more done.</p>
+                <p class="lead">
+                  <a href="#" class="btn btn-lg btn-secondary">Learn More</a>
+                </p>
+              </div>
+              <div class="mastfoot">
+                <div class="inner">
+                  <p>Made with love by <a href="#">Natalia</a>.</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div class="inner cover">
-          <h1 class="cover-heading">Welcome Solopreneurs.</h1>
-          <p class="lead">We know your hustle is strong but you don't have to go at it alone.  Join the Solopreneur network to meet other like-minded individuals and start building your network today. </p>
-            <p> Be inspired. Collaborate. Get more done.</p>
-          <p class="lead">
-            <a href="#" class="btn btn-lg btn-secondary">Learn More</a>
-          </p>
-        </div>
-
-        <div class="mastfoot">
-          <div class="inner">
-            <p>Made with love</a> by <a href="#">Natalia</a>.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <!-- cover end -->
+        </div><!-- cover end -->
 
 <!-- register modal -->
   <div class="container">
@@ -100,6 +91,7 @@
                     <input type="submit" class="btn btn-info submit" name="submit" value="register">
                   </div>
                   <div id="signUpSuccess">
+                    <br>
                     <!-- Button trigger for login -->
                     <button type="button" class="btn btn-primary login-button" id="loginButton" data-toggle="modal" data-target="#loginModal">log in</button>
                   </div>
@@ -154,33 +146,7 @@
           </div>
       </div>
   </div>
-</div><!-- modal for login end_________________________________________ -->
-
- <!-- section dashboard -->
- <section id="dashboard">
-   <div class="container-fluid">
-     <nav class="nav justify-content-end">
-        <a class="nav-link active" href="#">Home</a>
-        <a class="nav-link" data-toggle="modal" data-target="#resetModal">Reset Password</a>
-        <button type="button" class="btn btn-primary" id="log-out-btn">log out</button>
-      </nav>
-
-      <div class="container-fluid" id="dashboard-view">
-        <div class="row">
-          <div class="col">
-
-          </div>
-          <div class="col">
-            2 of 3
-          </div>
-          <div class="col">
-            3 of 3
-          </div>
-        </div>
-    </div>
-
-   </div>
- </section>
+</div><!-- login modal end -->
 
  <!-- reset password modal -->
 <div class="container">
@@ -225,6 +191,49 @@
         </div>
       </div>
     </div><!-- reset password modal end -->
+
+<!-- on login cover -->
+  <div class="site-wrapper" id="on-login-cover">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Solopreneur</h3>
+                <!-- signInSuccess navbar -->
+                <div class="container-fluid">
+                  <nav class="nav justify-content-center">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" data-toggle="modal" data-target="#resetModal">Reset Password</a>
+                    <button type="button" class="btn btn-primary" id="log-out-btn">log out</button>
+                  </nav>
+                </div>
+            </div>
+          </div>
+          <div class="container-fluid" id="columns">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="w-25 p-3"><img src="https://i.imgur.com/HdiJABNm.jpg" alt="profile-pic" id="profilePic" class="rounded-circle"/>
+                  </div>
+                  1 of 3
+                </div>
+                <div class="col">
+                  2 of 3
+                </div>
+                <div class="col">
+                  3 of 3
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Made with love by <a href="#">Natalia</a>.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
 
       <!-- bootstrap js -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
