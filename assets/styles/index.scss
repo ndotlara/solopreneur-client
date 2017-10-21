@@ -6,9 +6,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 // font-family: 'Antic', sans-serif;
 // font-family: 'Arimo', sans-serif;
 
-
-html *
-{
+html * {
    font-family: 'Antic', sans-serif !important;
 }
 
@@ -17,26 +15,34 @@ h1, h3 {
   margin-bottom: 30px !important;
 }
 
-.inner-cover p {
-  font-size: 16px !important;
-}
-
 .col {
   background-color: #dbe2f5;
   border-radius: 20px;
   box-shadow: 0 8px 6px -6px black;
 }
 
-#profile-pic {
-  max-width: 25% !important;
+.inner-cover p {
+  font-size: 16px !important;
+}
+
+.modal-header {
+  background-color: #868e96;
+  color: #9adbf4;
+}
+
+.modal-footer {
+  border-top: none;
 }
 
 .nav {
   padding-bottom: 45px;
 }
 
-
 #columns {
   height: 530px;
   justify-content: space-evenly;
+}
+
+#profile-pic {
+  max-width: 25% !important;
 }

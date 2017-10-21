@@ -62,55 +62,57 @@
   <!-- cover end -->
 
 <!-- register modal -->
-  <div class="container">
-      <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="registerModalLabel">Register</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-
-                <div class="modal-body">
-                  <div class="row">
-                      <div class="col-md-9 push-md-3 offset-md-3">
-                        <form id="registration" class="form-register"><p>Sign up for your Solopreneur account</p>
-                          <div class="input-group">
-                              <label for="password"> Email </label>
-                            <input type="text" class="form-control" name="credentials[email]" placeholder="email" aria-label="Username" aria-describedby="sizing-addon2">
-                          </div>
-                        <br>
-                          <div class="input-group">
-                          <label for="password"> Password </label>
-                          <input type="password" class="form-control" name="credentials[password]" placeholder="password">
-                          </div>
-                        <br>
-                          <div class="input-group">
-                          <label for="password-confirm"> Confirm Password </label>
-                          <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="confirm password">
-                          </div>
-
-                    </div>
-                  </div>
-                  <br>
-                  <div class="modal-footer-reg">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
-                    <input type="submit" class="btn btn-info submit" name="submit" value="register">
-                  </div>
-                  <div id="signUpSuccess">
-                    <!-- Button trigger for login -->
-                    <button type="button" class="btn btn-primary login-button" id="loginButton" data-toggle="modal" data-target="#loginModal">log in</button>
-                  </div>
-                  <div id="errorMessageModalSignUp"></div>
-                  </form>
-              <br>
-                </div>
-            </div>
+<div class="container">
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Register</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-9 push-md-3 offset-md-3">
+              <form id="registration" class="form-register"><p>Sign up for your Solopreneur account</p>
+                <div class="input-group">
+                  <label for="password"> Email </label>
+                  <input type="text" class="form-control" name="credentials[email]" placeholder="email" aria-label="Username" aria-describedby="sizing-addon2">
+                </div>
+              <br>
+                <div class="input-group">
+                <label for="password"> Password </label>
+                <input type="password" class="form-control" name="credentials[password]" placeholder="password">
+                </div>
+              <br>
+                <div class="input-group">
+                <label for="password-confirm"> Confirm Password </label>
+                <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="confirm password">
+                </div>
+              </form>
+            </div>
+          </div>
+          <br>
+        <div class="modal-footer-reg">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+          <input type="submit" class="btn btn-info submit" name="submit" value="register">
+        </div>
+
+          <!-- Button trigger for login -->
+          <br>
+          <span> Already registered?</span>
+          <br>
+          <button type="button" class="btn btn-primary login-button" id="loginButton" data-toggle="modal" data-target="#loginModal">log in</button>
+        </div>
+          <br>
+        <div id="signUpSuccess"></div>
+        <div id="errorMessageModalSignUp"></div>
+          <br>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 <!-- register modal end -->
 
 <!-- login modal -->
