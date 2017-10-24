@@ -1,6 +1,7 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import './assets/styles/cover';
+@import './assets/styles/colors';
 
 // font-family: 'Oswald', sans-serif;
 // font-family: 'Antic', sans-serif;
@@ -16,18 +17,27 @@ h1, h3 {
 }
 
 .col {
-  background-color: #dbe2f5;
+  background-color: $lavender;
   border-radius: 20px;
-  box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px $black;
 }
 
 .inner-cover p {
   font-size: 16px !important;
 }
 
+.modal p {
+  color: $midnightblue;
+}
+
+.modal-content {
+  background-color: $midnightblue;
+  text-align: left;
+}
 .modal-header {
-  background-color: #868e96;
-  color: #9adbf4;
+  background-color: $midnightblue;
+  color: $white;
+  text-align: center;
 }
 
 .modal-footer {
@@ -36,6 +46,10 @@ h1, h3 {
 
 .nav {
   padding-bottom: 45px;
+}
+
+span {
+  color: $white;
 }
 
 #columns {
