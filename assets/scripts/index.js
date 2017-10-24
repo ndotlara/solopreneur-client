@@ -13,7 +13,20 @@ $(() => {
   $('#log-out-btn').on('click', appEvents.logoutUser)
   // $('#log-out-btn2').on('click', appEvents.logoutUser)
   $('#passChange').on('submit', appEvents.resetPassword)
+  $('#dashboard').hide()
+  $('#log-out-btn').hide()
+  $('#passChange').hide()
+  $('#log-out-btn2').hide()
+  $('#close').hide()
+  $('#login').show()
+  $('#myAccountButton').hide()
+  $('.myAccountSection').hide()
+  $('#errorMessageModalLogin').hide()
+  $('#showChangePassButton').hide()
+  $('#loginButton2').hide()
+  $('.cancel').hide()
 })
+
 
 $(document).on('click', '.delete-comment', function (e) {
   event.preventDefault()
